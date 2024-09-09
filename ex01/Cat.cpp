@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:24:06 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 13:17:38 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/09 21:44:00 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,20 @@ Cat::Cat() : Animal()
 {
     this->_type = "Cat";
     std::cout << "Cat constructor called" << std::endl;
+    if (this->_brain == NULL)
+    {
+        std::cerr << "Error: Brain is NULL" << std::endl;
+        exit(1);
+    }
 }
 
 Cat::~Cat()
 {
+    // delete this->_brain; ??????
     std::cout << "Cat destructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+Cat::Cat(const Cat &copy) : Animal()
 {
     std::cout << "Cat copy constructor called" << std::endl;
     *this = copy;
@@ -31,6 +37,7 @@ Cat::Cat(const Cat &copy) : Animal(copy)
 
 Cat &Cat::operator=(const Cat &rhs)
 {
+    // ???????????????????????
     if (this != &rhs)
         this->_type = rhs._type;
     return (*this);

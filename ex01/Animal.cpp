@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:53:15 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 13:45:05 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/09 21:06:50 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ Animal::Animal() :_type("Default")
 {
     std::cout << "Animal constructor called" << std::endl;
 }
+Animal::Animal(const Animal& copy)
+{
+    std::cout << "Animal copy constructor called" << std::endl;
+    *this = copy;
+}
 
 Animal::~Animal()
 {
     std::cout << "Animal destructor called" << std::endl;
 }
 
-Animal::Animal(const Animal& copy)
-{
-    std::cout << "Animal copy constructor called" << std::endl;
-    *this = copy;
-}
 
 Animal &Animal::operator=(const Animal& rhs)
 {
@@ -40,7 +40,7 @@ Animal &Animal::operator=(const Animal& rhs)
 
 void Animal::makeSound() const
 {
-    std::cout << "Animal sound" << std::endl;
+    std::cout << "This animal doesn't make any sound." << std::endl;
 }
 
 std::string Animal::getType() const

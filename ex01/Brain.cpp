@@ -6,7 +6,7 @@
 /*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 13:53:06 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:15 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/09 21:40:42 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,10 @@ Brain &Brain::operator=(const Brain &rhs)
     return (*this);
 }
 
-// Brain::Brain(const std::string ideas[100])
-// {
-//     for (int i = 0; i < 100; i++)
-//         this->_ideas[i] = ideas[i];
-// }
-
-// std::string Brain::getIdea(int i)
-// {
-//     return (this->_ideas[i]);
-// }
-
-// void Brain::setIdea(int i, std::string idea)
-// {
-//     this->_ideas[i] = idea;
-// }
-
+const std::string Brain::getIdea(size_t i) const
+{
+    if (i < 100) 
+        return (this->_ideas[i]);
+    else
+        std::cout << "Index out of range" << std::endl;
+}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:44:18 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 11:47:38 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/09 21:46:01 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,9 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs)
 void WrongAnimal::makeSound() const
 {
     std::cout << "WrongAnimal sound" << std::endl;
+}
+
+std::string	WrongAnimal::getType(void)const
+{
+	return (this->_type);
 }
