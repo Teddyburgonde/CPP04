@@ -6,13 +6,13 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:53:15 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 09:55:55 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/09 13:16:49 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal() :_type("default")
 {
     std::cout << "Animal constructor called" << std::endl;
 }
@@ -33,7 +33,17 @@ Animal &Animal::operator=(const Animal& rhs)
     std::cout << "Animal assignation operator called" << std::endl;
     if (this != &rhs)
     {
-        this->type = rhs.type;
+        this->_type = rhs._type;
     }
     return (*this);
+}
+
+void Animal::makeSound() const
+{
+    std::cout << "Animal sound" << std::endl;
+}
+
+std::string Animal::getType() const
+{
+    return (this->_type);
 }

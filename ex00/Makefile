@@ -12,7 +12,11 @@ CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 #================== SOURCES =================#
 
-SRCS = Animal.cpp \ 
+SRCS = Animal.cpp \
+	   Cat.cpp \
+	   Dog.cpp \
+	   WrongAnimal.cpp \
+	   WrongCat.cpp \
 	   main.cpp
 
 #============== OBJECT FILES ================#
