@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:47:40 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 13:43:23 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/09 13:45:18 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal
     Animal &operator=(const Animal& rhs);
 
     public:
-    virtual void makeSound()   const;
+    virtual void makeSound() const;
     std::string getType() const;
     
     protected:
