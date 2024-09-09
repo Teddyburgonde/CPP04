@@ -6,7 +6,7 @@
 /*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:47:03 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 20:01:42 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/09 20:09:44 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main()
 {
-    const Animal* animal = new Animal();
+    //const Animal* animal = new Animal();
     const Animal* hachiro = new Dog();
     const Animal* garfield = new Cat();
     std::cout << hachiro->getType() << " " << std::endl;
@@ -28,9 +28,9 @@ int main()
     animal->makeSound();
     
     // idea
-    Brain *
+    //Brain *
     
-    delete hachiro;
+    //delete hachiro;
     delete garfield;
     delete animal;
 
