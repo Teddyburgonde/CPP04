@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:23:08 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 20:58:36 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/10 14:36:28 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class Cat: public Animal
     public:
         void makeSound() const;
     public:
-
         // ????????
         // void getIdeas(void)const;
 		// void setIdea(size_t i, std::string idea);

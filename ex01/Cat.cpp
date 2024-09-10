@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:24:06 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 21:44:00 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/10 14:38:56 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
+
 Cat::Cat() : Animal()
 {
-    this->_type = "Cat";
     std::cout << "Cat constructor called" << std::endl;
+    this->_type = "Cat";
+    //this->_brain = new Brain();
     if (this->_brain == NULL)
     {
         std::cerr << "Error: Brain is NULL" << std::endl;
