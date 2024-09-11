@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 13:46:47 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 20:50:18 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/11 13:33:11 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class Brain
         Brain &operator=(const Brain &rhs);
     
     public:
-        const std::string getIdea(size_t i)const;
+        std::string getIdea(size_t i)const;
+        void setIdea(std::string idea, size_t index);
 };
-
 
 
 #endif

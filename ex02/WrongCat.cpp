@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:46:23 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 11:47:31 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/09 21:48:11 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 WrongCat::WrongCat()
 {
+    this->_type = "WrongCat";
     std::cout << "WrongCat constructor called" << std::endl;
 }
 
@@ -32,11 +33,13 @@ WrongCat &WrongCat::operator=(const WrongCat &rhs)
 {
     if (this != &rhs)
         std::cout << "WrongCat assignation operator called" << std::endl;
+    this->_type = rhs._type;
     return (*this);
 }
 
 void WrongCat::makeSound() const
 {
+    // ???????? 
     std::cout << "WrongCat sound" << std::endl;
 }
 

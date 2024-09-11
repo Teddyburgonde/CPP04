@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 13:53:06 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:15 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/11 13:36:05 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 Brain::Brain()
 {
+    for (int i = 0; i < 100; i++)
+    {
+        _ideas[i] = "";
+    }
     std::cout << "Brain constructor called" << std::endl;
 }
 
@@ -33,26 +37,25 @@ Brain &Brain::operator=(const Brain &rhs)
     std::cout << "Brain assignation operator called" << std::endl;
     if (this != &rhs)
     {
-        // verif ????????????
         for (int i = 0; i < 100; i++)
             this->_ideas[i] = rhs._ideas[i];
     }
     return (*this);
 }
 
-// Brain::Brain(const std::string ideas[100])
-// {
-//     for (int i = 0; i < 100; i++)
-//         this->_ideas[i] = ideas[i];
-// }
+std::string Brain::getIdea(size_t i) const
+{
+    if (i < 100) 
+        return (this->_ideas[i]);
+    else
+        std::cout << "Index out of range" << std::endl;
+    return (NULL);
+}
 
-// std::string Brain::getIdea(int i)
-// {
-//     return (this->_ideas[i]);
-// }
-
-// void Brain::setIdea(int i, std::string idea)
-// {
-//     this->_ideas[i] = idea;
-// }
-
+void Brain::setIdea(std::string idea, size_t index)
+{
+    if (index < 100)
+        this->_ideas[index] = idea;
+    else
+        std::cout << "Index out of range" << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:23:08 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 12:18:10 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:33:17 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,21 @@
 
 class Cat: public Animal
 {
+    private:
+        Brain* _brain;
     public:
-    Cat();
-    Cat(const Cat& copy);
-    ~Cat();
-    Cat &operator=(const Cat& rhs);
+        Cat();
+        Cat(const Cat& copy);
+    
+        ~Cat();
+        Cat &operator=(const Cat& rhs);
     
     public:
-    void makeSound() const;
+        void makeSound() const;
+    public:
+        // ????????
+        // void getIdeas(void)const;
+		// void setIdea(size_t i, std::string idea);
 };
 
 

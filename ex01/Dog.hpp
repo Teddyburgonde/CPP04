@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:59:50 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 21:01:33 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/11 13:17:31 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
-#include "Brain.hpp"
 
 class Dog : public Animal 
 {
     private :
-        Brain *_brain;
+        Brain* _brain;
     public:
         Dog();
         Dog(const Dog& copy);
@@ -32,8 +31,7 @@ class Dog : public Animal
 
     // ??????
 
-    //void getIdeas(void)const;
-	//void setIdea(size_t i, std::string idea);
+    Brain* getBrain(void) const;
 
 };
 

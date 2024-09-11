@@ -6,73 +6,73 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:47:03 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/10 14:33:15 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/11 13:38:40 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "Brain.hpp"
+#include <iostream>
+#include <ostream>
 
 int main()
 {
-    const int   size = 6;
-    Animal *animals[size];
+	std::cout << "\033[91mCreate Animal:\033[0m" << std::endl;
 
-    for(int i = 0; i < size / 2; i++)
-    {
-        animals[i] = new Dog();
+
+	std::cout << std::endl;
+
+	const Animal *animal[10];
+	for (int i = 0; i < 10; i++)
+	{
+        if (i % 2 == 0)
+        {
+            animal[i] = new Dog();
+            if (animal[i] == NULL)
+            {
+                std::cerr << "Dog allocation failed" << std::endl;
+                return (1);
+            }
+        }
+        else
+        {
+            animal[i] = new Cat();
+            if (animal[i] == NULL)
+            {
+                std::cerr << "Cat allocation failed" << std::endl;
+                return (1);
+            }
+        }
     }
-    for(int i = 0; i < size / 2; i++)
+    std::cout << std::endl;
+
+    std::cout << "\033[92mTesting:\033[0m" << std::endl;
+    std::cout << std::endl;
+
+    for(int i = 0; i < 10; i++)
     {
-        animals[i] = new Cat();
+        std::cout << "It's a: " << animal[i]->getType();
+        std::cout << " He makes the sound: "; 
+        animal[i]->makeSound();
     }
+	for(int i = 0; i < 10; i++)
+	{
+        delete animal[i];
+    }
+	std::cout << std::endl;
+	std::cout << "\033[94mTesting Brain:\033[0m" << std::endl;
+	std::cout << std::endl;
 
-    for(int i = 0; i < size; i++)
+	Dog *a = new Dog();
+    
+    a->getBrain()->setIdea("Envie de manger", 0);
+    a->getBrain()->setIdea("Envie de se balader", 1);
+    a->getBrain()->setIdea("Envie de dormir", 2);
+    for (int i = 0; i < 3; i++)
     {
-        std::cout << animals[i]->getType() << " fait un son : ";
-        animals[i]->makeSound();
+        std::cout << a->getBrain()->getIdea(i) << std::endl;
     }
-
-    for(int i = 0; i < size; i++)
-    {
-        delete animals[i];
-    }
-    
-    
-
-
-
-
-
-
-
-
-
-    
-    // const Animal* animal = new Animal();
-    // const Animal* hachiro = new Dog();
-    // const Animal* garfield = new Cat();
-    // std::cout << hachiro->getType() << " " << std::endl;
-    // std::cout << garfield->getType() << " " << std::endl;
-    // std::cout << animal->getType() << " " << std::endl;
-    // hachiro->makeSound();
-    // garfield->makeSound();
-    // animal->makeSound();
-    
-    // // idea
-    // Brain *b;
-    // for(int i = 0; i < 100; i++)
-    // {
-        
-    // }
-    
-    
-    
-    // delete hachiro;
-    // delete garfield;
-    // delete animal;
-
+    delete a;
     return (0);
 }
