@@ -6,7 +6,12 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:57:44 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/23 13:57:45 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/24 15:21:04 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "AMateria.hpp"
+
+
+
+std::string const & getType() const; 
