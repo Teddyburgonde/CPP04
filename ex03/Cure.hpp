@@ -6,16 +6,25 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:58:04 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/23 14:29:42 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/25 11:52:03 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+# ifndef CURE_HPP
+#define CURE_HPP
+
+#include "AMateria.hpp"
 
 class Cure : public AMateria
 {
     public:
-    
-    Cure();
-    Cure* clone() const;
+		Cure(); // Constructor
+		Cure(const Cure &src); // Constructor by copy
+		virtual ~Cure(); // Destructor
+		Cure &operator=(const Cure &rhs); // Overloading
+    public:
+		AMateria* clone() const; //!donné par le sujet 
+		void use(ICharacter& target); //!donné par le sujet
 };
+
+#endif

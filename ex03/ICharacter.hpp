@@ -6,11 +6,14 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:44:00 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/23 17:05:54 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:16:08 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
+
+#include "AMateria.hpp"
 
 class ICharacter
 {
@@ -21,3 +24,5 @@ class ICharacter
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
 };
+
+#endif
