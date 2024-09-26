@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:32:41 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/25 10:49:14 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:38:39 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef AMATERIA_HPP
-#define AMaTERIA_HPP
+#define AMATERIA_HPP
 
 #include <iostream>
+#include <string.h>
 #include "ICharacter.hpp"
 
 class ICharacter; // permet de dire que la classe ICharacter existe

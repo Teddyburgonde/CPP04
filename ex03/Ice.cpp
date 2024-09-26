@@ -3,10 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:34:55 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/23 14:34:56 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:26:33 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Ice.hpp"
+
+Ice::Ice()
+{
+    
+}
+Ice::~Ice()
+{
+    
+}
+
+Ice::Ice(const Ice &src)
+{
+    
+}
+
+Ice &operator=(Ice &rsh)
+{
+    
+}
