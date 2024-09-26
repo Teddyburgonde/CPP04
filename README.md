@@ -30,16 +30,24 @@ contient que des méthodes purement virtuelle.
 fournir une implémentation pour 
 toutes les méthodes déclarées dans l'interface.
 
-
 Pour résumée une interface defini des fonctions sans les implémentations (pas de .cpp qui implémentes la fonction).
 Les fonctions seront implementer dans les class enfants dans leurs .cpp.
 ```
 
+
+Remarques:
+
+- La fonction clone et strictement en virtual dans AMateria.hpp donc tu ne dois pas definir les fonctions.
+dans AMateria.cpp. Virtual veut dire qu''il seront défini dans les classes dérivées.
+
+
 #Roadmap
 
-1. Crée la class Ice ✅
-2. Crée la class Cure ✅
-
+1. Cree la class AMateria
+2. Cree la fonction use 
+3. Cree la fonction getType()
+4. Crée la class Ice ✅
+5. Crée la class Cure ✅
 
 
 Notes : 

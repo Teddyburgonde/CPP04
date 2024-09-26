@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:58:29 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/25 16:16:56 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/26 11:36:07 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ class Ice : public AMateria
         Ice &operator=(Ice &rsh);
         virtual ~Ice();
     public:
-        AMateria* clone() const;
+        Ice* clone() const;
         void use(ICharacter& target);
+    private:
+        std::string _type;
 };
 
 #endif
