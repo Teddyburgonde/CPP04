@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:58:04 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/25 11:52:03 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:10:59 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cure : public AMateria
 		virtual ~Cure(); // Destructor
 		Cure &operator=(const Cure &rhs); // Overloading
     public:
-		AMateria* clone() const; //!donné par le sujet 
+		Cure* clone() const; //!donné par le sujet 
 		void use(ICharacter& target); //!donné par le sujet
 };
 
