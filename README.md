@@ -43,21 +43,14 @@ dans AMateria.cpp. Virtual veut dire qu''il seront défini dans les classes dér
 
 #Roadmap
 
-1. Cree la class AMateria
-2. Cree la fonction use 
-3. Cree la fonction getType()
+1. Cree la class AMateria ✅
+2. Cree la fonction use  ✅
+3. Cree la fonction getType() ✅
 4. Crée la class Ice ✅
 5. Crée la class Cure ✅
 
 
 Notes : 
-
-	
-
-
-
-
-
 
 ✅
 ❌
