@@ -24,6 +24,7 @@ C'est quoi une Classe abstraite
 C'est quoi une interface ? 
 
 ```c
+
 - Une interface en C++ est une classe abstraite qui 
 contient que des méthodes purement virtuelle.
 - Les classes dérivées doivent obligatoirement 
@@ -34,23 +35,41 @@ Pour résumée une interface defini des fonctions sans les implémentations (pas
 Les fonctions seront implementer dans les class enfants dans leurs .cpp.
 ```
 
-
 Remarques:
 
+```c
 - La fonction clone et strictement en virtual dans AMateria.hpp donc tu ne dois pas definir les fonctions.
 dans AMateria.cpp. Virtual veut dire qu''il seront défini dans les classes dérivées.
+```
 
+C'est quoi une matéria ?
+```c
+C'est un tableau qui peut contenir 4 sorts magiques,
+par exemple : 
+_materia[0] : Materia de feu
+_materia[1] : Materia de glace
+_materia[2] : Materia de guérison
+_materia[3] : Materia de foudre
+```
 
 #Roadmap
 
-1. Cree la class AMateria ✅
-2. Cree la fonction use  ✅
-3. Cree la fonction getType() ✅
-4. Crée la class Ice ✅
-5. Crée la class Cure ✅
+1. Cree les differents fichiers hpp:
+    AMateria.hpp
+    Cure.hpp
+    Ice.hpp
+    ICharacter.hpp
+    IMateriaSource.hpp
+    MateriaSource.hpp
+    Character.hpp
 
+2. Cree les differents fichiers cpp:
+    AMateria.cpp
+    Cure.cpp
+    Ice.cpp
+    Character.cpp
+    MateriaSource.cpp
 
-Notes : 
 
 ✅
 ❌

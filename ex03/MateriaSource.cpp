@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:51:26 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/29 02:55:18 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/29 14:15:10 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,34 @@ MateriaSource::MateriaSource(const MateriaSource &src)
     }
 }
 
-Character& Character::operator=(const Character& rhs)
+MateriaSource& MateriaSource::operator=(const MateriaSource &rhs)
 {
-	
+	if (this != &rhs)
+	{
+		for(int i = 0; i < MAX_MATERIA; i++)
+		{
+			if (_materia[i] != NULL) // Supprime l'ancienne instance si elle existe
+				delete _materia[i];
+			// Copier l'objet depuis rhs, ou mettre NULL si rhs._materia[i] est NULL
+			if (rhs._materia[i] != NULL)
+				this->_materia[i] = rhs._materia[i]->clone(); // Cloner l'objet
+			else
+				_materia[i] = NULL;	// Assigner NULL si rhs.materia[i] est NULL
+		}
+	}
+	return (*this);
 }
 
 MateriaSource::~MateriaSource()
 {
-    //for
-	//delete
+	std::cout << "MateriaSource destructor called" << std::endl;
+	for(int i = 0; i < MAX_MATERIA; i++)
+	{
+		if (_materia[i] != NULL)
+		{
+			delete _materia[i];
+		}
+	}
 }
 
 void MateriaSource::learnMateria(AMateria*)
