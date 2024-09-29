@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:51:26 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/29 14:15:10 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/29 18:03:17 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,23 @@ MateriaSource::~MateriaSource()
 	}
 }
 
-void MateriaSource::learnMateria(AMateria*)
+// La fonction learnMateria doit réaliser deux tâches :
+// - Apprendre une Nouvelle AMateria
+// - Ajouter à l'inventaire 
+void MateriaSource::learnMateria(AMateria* m)
 {
-	//for 
-
+	if (m != NULL)
+	{
+		for(int i = 0; i < MAX_MATERIA; i++)
+		{
+			if (_materia[i] == NULL)
+			{
+				this->_materia[i] = m->clone(); // Apprends une nouvelle AMateria et l'ajoute a l'inventaire 
+				return ;
+			}
+		}
+	}
+	std::cout << "MateriaSource is full" << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)

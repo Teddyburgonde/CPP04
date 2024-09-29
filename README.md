@@ -70,6 +70,36 @@ _materia[3] : Materia de foudre
     Character.cpp
     MateriaSource.cpp
 
+**MateriaSource.cpp**
+
+La fonction learnMateria doit réaliser deux tâches :
+	- Apprendre une Nouvelle AMateria
+	- Ajouter à l'inventaire 
+
+```c
+void MateriaSource::learnMateria(AMateria*)
+{
+	//for 
+
+}
+```
+
+**Apprendre une nouvelle AMateria :** 
+
+```c
+- La fonction prends en entrée un objet AMateria 
+et integre cet objet dans le systeme de MateriaSource.
+Cela peut impliquer la création d'une copie de l'objet pour garantir
+que MateriaSource possède sa propre version de l'AMateria.
+```
+
+**Ajouter à l'inventaire**
+
+```c
+Une fois que l'AMateria est apprise, elle doit être ajoutée à un emplacement disponible dans le tableau _materia de MateriaSource.
+
+
+
 
 ✅
 ❌
