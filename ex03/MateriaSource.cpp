@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:51:26 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/29 18:03:17 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 14:33:05 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 MateriaSource::MateriaSource()
 {
-    
+	
 }
 
 MateriaSource::MateriaSource(const MateriaSource &src)
@@ -65,7 +65,7 @@ MateriaSource::~MateriaSource()
 
 // La fonction learnMateria doit réaliser deux tâches :
 // - Apprendre une Nouvelle AMateria
-// - Ajouter à l'inventaire 
+// - Ajouter à l'inventaire 	
 void MateriaSource::learnMateria(AMateria* m)
 {
 	if (m != NULL)
@@ -84,9 +84,12 @@ void MateriaSource::learnMateria(AMateria* m)
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-	//for
-	// return clone()
-	
-	//return (NULL)	
+	for (int i = 0; i < MAX_MATERIA; i++)
+	{
+		
+		if (_materia[i] != NULL && _materia[i]->getType() == type)
+			return (_materia[i]->clone());
+	}
+	return (NULL);
 }
 

@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:58:04 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/27 14:10:59 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:04:13 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CURE_HPP
 
 #include "AMateria.hpp"
+
+class AMateria;
 
 class Cure : public AMateria
 {

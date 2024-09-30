@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 11:07:18 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/28 13:02:22 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 14:41:26 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Character : public ICharacter
 	//! forme canonique
 	public:
 		Character();
+		//Character(std::string const &name);
 		Character(const Character &src);
 		Character &operator=(const Character &rhs);
 		~Character();

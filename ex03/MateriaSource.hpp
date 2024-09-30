@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:52:02 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/29 17:42:20 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:02:07 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class MateriaSource : public IMateriaSource
 
     public:
         void learnMateria(AMateria* m);
-        virtual AMateria* createMateria(std::string const & type);
+        AMateria* createMateria(std::string const & type);
     private:
 	    AMateria* _materia[4];
 };

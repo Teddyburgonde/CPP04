@@ -6,16 +6,19 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:32:41 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/26 11:54:51 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:04:39 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef AMATERIA_HPP
-#define AMATERIA_HPP
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
 #include <iostream>
 #include <string.h>
 #include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
+#include "Cure.hpp"
+#include "Ice.hpp"
 
 class ICharacter; // permet de dire que la classe ICharacter existe
 // La precision permet d'eviter les dependances cycliques
