@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 11:07:18 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 15:17:24 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 20:49:20 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Character : public ICharacter
 		Character &operator=(const Character &rhs);
 		~Character();
 	public:
+		std::string const & getName() const;
 		void	equip(AMateria *materia);
 		void	unequip(int idx) = 0;
 		void	use(int idx, ICharacter& target) = 0;

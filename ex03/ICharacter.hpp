@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:44:00 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 15:18:50 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 20:48:39 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
