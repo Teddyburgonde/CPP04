@@ -6,7 +6,7 @@
 /*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:34:55 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/26 20:37:25 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/09/30 19:54:30 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Ice::~Ice()
     std::cout << "Ice destructor copy called" << std::endl;
 }
 
-Ice::Ice(const Ice &src)
+Ice::Ice(const Ice &src) : AMateria(src)
 {
 	std::cout << "Ice constructor copy called" << std::endl;
 }

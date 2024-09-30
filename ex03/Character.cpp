@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:38:44 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/29 01:39:03 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 19:56:18 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@ Character::Character() : _name(""), _inventory()
 
 Character::Character(const Character &src)
 {
-    int i;
-
-    i = 0;
     this->_name = src.getName();
 	for (int i = 0; i < MAX_MATERIA; i++)
 	{

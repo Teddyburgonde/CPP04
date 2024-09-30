@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:29:51 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 14:31:06 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 19:54:04 by teddybandam      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 #include "Cure.hpp"
 
 Cure::Cure()
+
 {
     std::cout << "Cure constructor called" << std::endl;
 }
 
-Cure::Cure(const Cure &src)
+Cure::Cure(const Cure &src) : AMateria(src)
 {
     std::cout << "Cure constructor copy called" << std::endl;
 }

@@ -15,9 +15,8 @@ CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 SRCS = 	AMateria.cpp\
 		Cure.cpp \
 		Ice.cpp \
-		ICharacter.cpp \
-		IMateriaSource.cpp \
 		MateriaSource.cpp \
+		Character.cpp \
 		main.cpp
 
 #============== OBJECT FILES ================#
