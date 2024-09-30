@@ -6,12 +6,12 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:52:02 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 15:02:07 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:20:03 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOUCE_HPP
-# define MATERIASOUCE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 #include "IMateriaSource.hpp"
 

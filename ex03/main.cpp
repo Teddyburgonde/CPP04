@@ -6,11 +6,14 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:13:53 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 14:39:05 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:20:40 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 #include "Character.hpp"
 
 int main()

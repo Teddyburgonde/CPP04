@@ -6,14 +6,13 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 11:07:18 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 14:41:26 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/09/30 15:17:24 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-#include "AMateria.hpp"
 #include "ICharacter.hpp"
 
 #define MAX_MATERIA 4
