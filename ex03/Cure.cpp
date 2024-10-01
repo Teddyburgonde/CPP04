@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:29:51 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/01 09:14:18 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:19:30 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ICharacter.hpp"
 #include "Cure.hpp"
 
-Cure::Cure()
+Cure::Cure() : AMateria("cure")
 {
     std::cout << "Cure constructor called" << std::endl;
 }
@@ -33,7 +33,7 @@ Cure &Cure::operator=(const Cure &rhs)
 {
     if (this != &rhs)
     {
-        this->_type = rhs._type;
+        AMateria::operator=(rhs);
     }
     return (*this);
 }

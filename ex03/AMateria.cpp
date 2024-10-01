@@ -6,21 +6,21 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:57:44 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 14:13:21 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:06:18 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-AMateria::AMateria()
+AMateria::AMateria() : _type("")
 {
     std::cout << "AMateria constructor called" << std::endl;
 }
 
 AMateria::AMateria(std::string const &type) :_type(type)
 {
-    std::cout << "AMateria constructor called with initialize" << std::endl;
+    std::cout << "AMateria constructor with parameter called" << std::endl;
 }
 
 AMateria::~AMateria()

@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:38:44 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/01 09:23:14 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/01 10:59:04 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,21 +52,21 @@ Character &Character::operator=(const Character &rhs)
 	std::cout << "Character assignation operator called" << std::endl;
 	if (this != &rhs)
 	{
+		_name = rhs._name;
 		for (int i= 0; i < MAX_MATERIA; i++)
 		{
 			if (_inventory[i])
 			{
 				delete _inventory[i];
             	_inventory[i] = NULL;
-			}
-			_name = rhs._name;
-			for(int i = 0; i < MAX_MATERIA; i++)
-			{		
-				if (rhs._inventory[i] != NULL)
-					_inventory[i] = rhs._inventory[i]->clone();
-				else
-					_inventory[i] = NULL;
-			}
+			}	
+		}
+		for(int i = 0; i < MAX_MATERIA; i++)
+		{		
+			if (rhs._inventory[i] != NULL)
+				_inventory[i] = rhs._inventory[i]->clone();
+			else
+				_inventory[i] = NULL;
 		}
 	}
 	return (*this);
@@ -77,19 +77,28 @@ std::string const & Character::getName() const
 	return this->_name;
 }
 
-// fonction pour equiper un objet 
+// fonction pour equiper un objet
 void	Character::equip(AMateria *materia)
 {
 	if (materia != NULL)
 	{
 		for(int i = 0; i < MAX_MATERIA; i++)
 		{
+			if (_inventory[i] == materia)
+			{
+				std::cout << "This Materia is already equipped." << std::endl;
+				return ;
+			}
+		}
+		for(int i = 0; i < MAX_MATERIA; i++)
+		{
 			if (_inventory[i] == NULL)
 			{
 				_inventory[i] = materia;
-				break ;
+				return ;
 			}
 		}
+		std::cout << "No empty slot to equip the Materia." << std::endl;
 	}
 }
 // fonction pour désequiper un objet
@@ -98,9 +107,7 @@ void	Character::unequip(int idx)
 	if (idx >= 0 && idx <= MAX_MATERIA - 1)
 	{
 		if (_inventory[idx] != NULL)
-		{
 			_inventory[idx] = NULL;
-		}
 	}
 }
 // La fonction permet d'utiliser un objet de l'inventaire

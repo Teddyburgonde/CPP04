@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:51:26 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 14:33:05 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:37:48 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,19 @@
 
 MateriaSource::MateriaSource()
 {
-	
+	for (int i = 0; i < MAX_MATERIA; i++)
+		_materia[i] = NULL;
 }
 
 MateriaSource::MateriaSource(const MateriaSource &src)
 {
-	if (this != &src)
+	for (int i = 0; i < MAX_MATERIA; i++)
 	{
-		for (int i = 0; i < MAX_MATERIA; i++)
-		{
-			if (src._materia[i] != NULL)
-				this->_materia[i] = src._materia[i]->clone(); 
-			else
-				this->_materia[i] = NULL;
-        }
-    }
+		if (src._materia[i] != NULL)
+			this->_materia[i] = src._materia[i]->clone(); 
+		else
+			this->_materia[i] = NULL;
+	}
 }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource &rhs)
@@ -40,12 +38,13 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &rhs)
 		for(int i = 0; i < MAX_MATERIA; i++)
 		{
 			if (_materia[i] != NULL) // Supprime l'ancienne instance si elle existe
+			{
 				delete _materia[i];
+				_materia[i] = NULL;	
+			}
 			// Copier l'objet depuis rhs, ou mettre NULL si rhs._materia[i] est NULL
 			if (rhs._materia[i] != NULL)
 				this->_materia[i] = rhs._materia[i]->clone(); // Cloner l'objet
-			else
-				_materia[i] = NULL;	// Assigner NULL si rhs.materia[i] est NULL
 		}
 	}
 	return (*this);
@@ -70,6 +69,14 @@ void MateriaSource::learnMateria(AMateria* m)
 {
 	if (m != NULL)
 	{
+		for (int i = 0; i < MAX_MATERIA; i++)
+		{
+			if (_materia[i] != NULL && _materia[i]->getType() == m->getType())  // Vérifie si cette Materia est déjà apprise
+			{
+				std::cout << "This Materia is already learned." << std::endl;
+				return ;
+            }
+        }
 		for(int i = 0; i < MAX_MATERIA; i++)
 		{
 			if (_materia[i] == NULL)
@@ -78,8 +85,8 @@ void MateriaSource::learnMateria(AMateria* m)
 				return ;
 			}
 		}
+		std::cout << "MateriaSource is full" << std::endl;
 	}
-	std::cout << "MateriaSource is full" << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)

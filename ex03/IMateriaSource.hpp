@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:11:31 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 15:03:27 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:41:45 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define IMATERIASOURCE_HPP
 
 #include "AMateria.hpp"
-
-class AMateria;
 
 class IMateriaSource
 {
