@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:38:44 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 20:45:43 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/10/01 09:23:14 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #include "AMateria.hpp"
 
 Character::Character() : _name(""), _inventory()
+{
+	for (int i = 0; i < MAX_MATERIA; i++)
+		_inventory[i] = NULL;
+}
+
+Character::Character(std::string const &name) :_name(name)
 {
 	for (int i = 0; i < MAX_MATERIA; i++)
 		_inventory[i] = NULL;

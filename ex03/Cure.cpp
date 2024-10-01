@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:29:51 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 19:54:04 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/10/01 09:14:18 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "Cure.hpp"
 
 Cure::Cure()
-
 {
     std::cout << "Cure constructor called" << std::endl;
 }
