@@ -117,6 +117,48 @@ void MateriaSource::learnMateria(AMateria*)
 
 }
 ```
+---------------------------------------------------------------
+
+**Explication de code ex03**
+
+**Amateria.hpp**
+
+- class ICharacter pour dire qu'il y a une class ICharacter qui existe pour pas cree de conflit.
+- virtual pour le destructeur pour que pour que quand je l'appelle dans les class derivées
+c'est leurs constructeur qui sera appelé , pas celui la.
+- virtual permet de pouvoir definir les fonctions dans les class dérivées.
+- protected signifie que les membres sont accessibles dans la class de base et dans les classes dérivées mais pas depuis l'exterieur.
+
+**Amateria.cpp**
+
+```c
+AMateria &AMateria::operator=(const AMateria &rhs)
+```
+- _type permet de donner un type au materia pour les differenciers.
+
+```c
+void    AMateria::use(ICharacter& target)
+```
+- Use c'est pour dire que la materia (le sort) est utilisé sur ce personnage.
+
+**Character.hpp**
+
+```c
+class Character : public ICharacter 
+```
+C'est pour dire que la class Character herite de la class ICharacter
+
+
+```c
+AMateria* _inventory[4];
+```
+C'est un tableau de pointeur. 
+Le pointeur pointe vers un element du tableau. 
+
+
+
+
+
 
 ✅
 ❌

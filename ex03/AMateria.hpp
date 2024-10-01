@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:32:41 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/30 15:19:04 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:39:15 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,22 @@
 #include <iostream>
 #include "ICharacter.hpp"
 
-class ICharacter; // permet de dire que la classe ICharacter existe
-// La precision permet d'eviter les dependances cycliques
+class ICharacter; 
 
 class AMateria
 {
     public:
-        AMateria(std::string const & type); //! donné par le sujet
-        AMateria(const AMateria &src); // constructeur par copie
-        AMateria &operator=(const AMateria &rhs); // operateur d'affectation
-        virtual ~AMateria(); // destructeur
+        AMateria(std::string const & type);
+        AMateria(const AMateria &src);
+        AMateria &operator=(const AMateria &rhs);
+        virtual ~AMateria();
     public:
-        std::string const & getType() const; //!donné par le sujet //Returns the materia type 
-        // quand un objet qui herite de cette classe est détruit,
-        // le destructeur est appelé
-		virtual AMateria* clone() const = 0; //!donné par le sujet 
-		virtual void use(ICharacter& target); //!donné par le sujet
+        std::string const & getType() const;
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
     protected:
-        std::string _type; //!donné par le sujet
-        AMateria(); // constructeur par defaut
+        std::string _type;
+        AMateria();
 };
 
 #endif
