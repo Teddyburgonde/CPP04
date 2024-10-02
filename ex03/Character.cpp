@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:38:44 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/01 10:59:04 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/02 10:58:20 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,9 @@ Character &Character::operator=(const Character &rhs)
 
 std::string const & Character::getName() const
 {
-	return this->_name;
+	return (this->_name);
 }
 
-// fonction pour equiper un objet
 void	Character::equip(AMateria *materia)
 {
 	if (materia != NULL)
@@ -101,7 +100,7 @@ void	Character::equip(AMateria *materia)
 		std::cout << "No empty slot to equip the Materia." << std::endl;
 	}
 }
-// fonction pour désequiper un objet
+
 void	Character::unequip(int idx)
 {
 	if (idx >= 0 && idx <= MAX_MATERIA - 1)
@@ -110,8 +109,7 @@ void	Character::unequip(int idx)
 			_inventory[idx] = NULL;
 	}
 }
-// La fonction permet d'utiliser un objet de l'inventaire
-// sur une cible en activant l'effet de cet objet sur un autre personnage
+
 void	Character::use(int idx, ICharacter& target)
 {
 	if (idx >= 0 && idx <= MAX_MATERIA - 1)

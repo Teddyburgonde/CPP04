@@ -156,6 +156,120 @@ C'est un tableau de pointeur.
 Le pointeur pointe vers un element du tableau. 
 
 
+**Character.cpp**
+
+```c
+Character::Character(const Character &src)
+{
+    this->_name = src.getName();
+	for (int i = 0; i < MAX_MATERIA; i++)
+	{
+        if (src._inventory[i] != NULL)
+            this->_inventory[i] = src._inventory[i]->clone();
+        else
+            this->_inventory[i] = NULL;
+    }
+}
+```
+Le constructeur par copie permet de creer une copie de l'objet.
+this->_name = src.getName();
+la on obtient le nom pour le copier dans _name
+Je parcours chaque element du tableau _inventory de l'objet source src.
+Puis je clone les elements de l'inventaire de src dans l'objet.
+
+
+
+```c
+void	Character::equip(AMateria *materia)
+```
+Cette fonction permet de mettre les materia dans l'inventaire.
+
+```c
+void Character::unequip(int idx)
+{
+    if (idx >= 0 && idx <= MAX_MATERIA - 1)
+    {
+        if (_inventory[idx] != NULL)
+            _inventory[idx] = NULL;
+    }
+}
+```
+Cette fonction permet de d'enlever une materia.
+Le premier if permet de voir si il est bien dans la range.
+
+
+```c
+void	Character::use(int idx, ICharacter& target);
+```
+Permet d'appliquer un sort sur une cible 
+
+**Cure.cpp**
+
+```c
+Cure::Cure() : AMateria("cure")
+{
+    std::cout << "Cure constructor called" << std::endl;
+}
+```
+
+Ici on appelle le constructeur de la class parents (AMateria) 
+pour utiliser le comportement qui a etait defini dans AMateria.
+
+```c
+Cure &Cure::operator=(const Cure &rhs)
+{
+    if (this != &rhs)
+    {
+        this->AMateria::operator=(rhs);
+    }
+    return (*this);
+}
+```
+Ici on appelle l'operateur d'assigniation de AMateria pour copier ce qu'il y a dans AMateria
+et dans rhs.
+
+
+```c
+AMateria* Cure::clone() const
+{
+    Cure *newCure = new Cure(*this);
+    return (newCure);
+}
+```
+On clone un objet.
+
+**MateriaSource.cpp**
+
+```c
+
+void MateriaSource::learnMateria(AMateria* m)
+{
+	if (m != NULL)
+	{
+		for (int i = 0; i < MAX_MATERIA; i++)
+		{
+			if (_materia[i] != NULL && _materia[i]->getType() == m->getType())
+			{
+				std::cout << "This Materia is already learned." << std::endl;
+				return ;
+            }
+        }
+		for(int i = 0; i < MAX_MATERIA; i++)
+		{
+			if (_materia[i] == NULL)
+			{
+				this->_materia[i] = m->clone(); // Apprends une nouvelle AMateria et l'ajoute a l'inventaire 
+				return ;
+			}
+		}
+		std::cout << "MateriaSource is full" << std::endl;
+	}
+}
+```
+Le premier if verifie si la materia est deja prise.
+Le deuxieme if Apprends une nouvelle AMateria et l'ajoute a l'inventaire.
+
+
 
 
 

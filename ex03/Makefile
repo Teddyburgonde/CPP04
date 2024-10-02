@@ -48,7 +48,8 @@ clean:
 	@$(RM) $(OBJS)
 
 fclean: clean
-	@$(RM) $(NAME) 
+	@$(RM) $(NAME)
+	clear
 
 re: fclean all
 

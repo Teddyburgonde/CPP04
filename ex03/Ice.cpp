@@ -6,11 +6,12 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:34:55 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/01 11:29:01 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:49:45 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include "AMateria.hpp"
 
 Ice::Ice() : AMateria("ice")
 {
@@ -37,12 +38,10 @@ Ice &Ice::operator=(Ice &rhs)
     
 }
 
-Ice* Ice::clone() const
+AMateria* Ice::clone() const
 {
-	Ice *ice;
-
-	ice = new Ice();
-	return (ice);
+	Ice *newIce = new Ice(*this);
+	return (newIce);
 }
 
 void Ice::use(ICharacter& target)

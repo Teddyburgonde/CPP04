@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 14:29:51 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/01 11:19:30 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:37:51 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,14 @@ Cure::~Cure()
 Cure &Cure::operator=(const Cure &rhs)
 {
     if (this != &rhs)
-    {
-        AMateria::operator=(rhs);
-    }
+        this->AMateria::operator=(rhs);
     return (*this);
 }
 
-Cure* Cure::clone() const
+AMateria* Cure::clone() const
 {
-    Cure *cure;
-
-    cure = new Cure();
-    return (cure);
+    Cure *newCure = new Cure(*this);
+    return (newCure);
 }
 
 void Cure::use(ICharacter& target)
