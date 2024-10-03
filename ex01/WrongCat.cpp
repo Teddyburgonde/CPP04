@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: teddybandama <teddybandama@student.42.f    +#+  +:+       +#+        */
+/*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 11:46:23 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/09 21:48:11 by teddybandam      ###   ########.fr       */
+/*   Updated: 2024/10/03 12:48:01 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ WrongCat &WrongCat::operator=(const WrongCat &rhs)
 
 void WrongCat::makeSound() const
 {
-    // ???????? 
     std::cout << "WrongCat sound" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:51:26 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/02 12:03:49 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/03 12:33:23 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &rhs)
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << "MateriaSource destructor called" << std::endl;
 	for(int i = 0; i < MAX_MATERIA; i++)
 	{
 		if (_materia[i] != NULL)
@@ -75,7 +74,7 @@ void MateriaSource::learnMateria(AMateria* m)
 		{
 			if (_materia[i] == NULL)
 			{
-				this->_materia[i] = m->clone();
+				this->_materia[i] = m;
 				return ;
 			}
 		}

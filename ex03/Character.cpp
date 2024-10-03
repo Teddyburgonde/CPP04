@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:38:44 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/02 10:58:20 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/03 12:21:26 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ Character::Character(const Character &src)
 
 Character::~Character()
 {
-	std::cout << "Character destructor called" << std::endl;
 	for(int i = 0; i < MAX_MATERIA; i++)
 	{
 		if (_inventory[i])
@@ -49,7 +48,6 @@ Character::~Character()
 
 Character &Character::operator=(const Character &rhs)
 {
-	std::cout << "Character assignation operator called" << std::endl;
 	if (this != &rhs)
 	{
 		_name = rhs._name;

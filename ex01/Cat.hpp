@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:23:08 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/11 12:33:17 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/03 12:47:49 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,6 @@ class Cat: public Animal
     
     public:
         void makeSound() const;
-    public:
-        // ????????
-        // void getIdeas(void)const;
-		// void setIdea(size_t i, std::string idea);
 };
 
 

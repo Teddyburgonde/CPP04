@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:59:50 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/11 13:17:31 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/03 12:47:55 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ class Dog : public Animal
     
     public:
     void makeSound() const;
-
-    // ??????
-
     Brain* getBrain(void) const;
 
 };
