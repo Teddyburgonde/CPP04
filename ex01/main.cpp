@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:47:03 by tebandam          #+#    #+#             */
-/*   Updated: 2024/09/11 13:38:40 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/03 14:28:06 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ int main()
 
 	Dog *a = new Dog();
     
-    a->getBrain()->setIdea("Envie de manger", 0);
-    a->getBrain()->setIdea("Envie de se balader", 1);
-    a->getBrain()->setIdea("Envie de dormir", 2);
+    a->getBrain()->setIdea("Desire to eat", 0);
+    a->getBrain()->setIdea("Want to go for a walk", 1);
+    a->getBrain()->setIdea("Want to sleep", 2);
     for (int i = 0; i < 3; i++)
     {
         std::cout << a->getBrain()->getIdea(i) << std::endl;
