@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 23:51:26 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/03 12:33:23 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:25:45 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void MateriaSource::learnMateria(AMateria* m)
 			if (_materia[i] != NULL && _materia[i]->getType() == m->getType())
 			{
 				std::cout << "This Materia is already learned." << std::endl;
+				delete	m;
 				return ;
             }
         }
@@ -86,9 +87,10 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 {
 	for (int i = 0; i < MAX_MATERIA; i++)
 	{
-		
 		if (_materia[i] != NULL && _materia[i]->getType() == type)
+		{
 			return (_materia[i]->clone());
+		}
 	}
 	return (NULL);
 }

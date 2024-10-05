@@ -6,7 +6,7 @@
 /*   By: tebandam <tebandam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:13:53 by tebandam          #+#    #+#             */
-/*   Updated: 2024/10/03 12:19:42 by tebandam         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:27:49 by tebandam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,12 @@ int main()
 	AMateria* tmp;
     tmp = src->createMateria("ice");
     me->equip(tmp);
+	
+   
     tmp = src->createMateria("cure");
+
     me->equip(tmp);
+	
 
     ICharacter* bob = new Character("bob");
 
